@@ -18,7 +18,7 @@ public class ColecaoPessoa {
     }
 
     public void AdicionarPessoa(String nome, int idade) {
-        if (colecao.size() == tamanho) {
+        if (this.colecao.size() == tamanho) {
             throw new IndexOutOfBoundsException("A coleção antingiu o tamanho máximo de pessoas.");
         }
 
