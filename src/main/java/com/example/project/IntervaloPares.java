@@ -1,6 +1,6 @@
 package com.example.project;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class IntervaloPares {
     
@@ -15,9 +15,9 @@ public class IntervaloPares {
 
     public int[] calcularIntervalo() throws Exception {
 
-        ArrayList<int> colecao;
+        ArrayList<Integer> colecao = new ArrayList<>();
 
-        if (this.numeroInicial < numeroF) {
+        if (this.numeroInicial < this.numeroFinal) {
             for (int i = this.numeroInicial; i <= this.numeroFinal; i++) {
                 if (i % 2 == 0) {
                     colecao.add(i);
@@ -33,7 +33,6 @@ public class IntervaloPares {
             throw new Exception(IMPOSSIVEL_CALCULAR_INTERVALO);
         }
 
-        return colecao.toArray(new int[0]);
-
+        return colecao.stream().mapToInt(i -> i).toArray();
     }
 }

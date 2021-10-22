@@ -23,7 +23,7 @@ class IntervaloParesUnitTest {
     }
 
     @Test
-    void validarIntervaloCrescenteComSucesso() {
+    void validarIntervaloCrescenteComSucesso() throws Exception {
         // arrange
         IntervaloPares intervaloPares = new IntervaloPares(1, 5);
 
@@ -31,12 +31,12 @@ class IntervaloParesUnitTest {
         int[] intervalo = intervaloPares.calcularIntervalo();
     
         // assert
-        assertEquals(intervalo[0], 2)
-        assertEquals(intervalo[1], 4)
+        assertEquals(intervalo[0], 2);
+        assertEquals(intervalo[1], 4);
     }
 
     @Test
-    void validarIntervaloDerescenteComSucesso() {
+    void validarIntervaloDerescenteComSucesso() throws Exception {
         // arrange
         IntervaloPares intervaloPares = new IntervaloPares(5, 1);
 
@@ -44,8 +44,8 @@ class IntervaloParesUnitTest {
         int[] intervalo = intervaloPares.calcularIntervalo();
         
         // assert
-        assertEquals(intervalo[0], 4)
-        assertEquals(intervalo[1], 2)
+        assertEquals(intervalo[0], 4);
+        assertEquals(intervalo[1], 2);
     }
 
 }
