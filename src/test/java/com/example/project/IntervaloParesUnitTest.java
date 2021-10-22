@@ -1,6 +1,5 @@
 package com.example.project;
 
-import com.example.project.models.Pessoa;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
